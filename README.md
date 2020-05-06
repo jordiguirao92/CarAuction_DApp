@@ -1,3 +1,10 @@
+# Sobre el curso de Ethereum
+Esta práctica es para el curso de Introducción a Ethereum de Coding Bootcamps: http://coding-bootcamps.com/es/ 
+Para más información sobre este curso, visite el siguiente enlace: https://learn.coding-bootcamps.com/p/introduccion-a-ethereum-blockchain-en-espanol
+
+Para más información sobre cursos de Blockchain en Español, visite el siguiente enlace: https://learn.coding-bootcamps.com/p/coding-bootcamps-espanol 
+
+
 # CarAuction_DApp
  ## Coding Bootcamps - Car Auction DApp
 
