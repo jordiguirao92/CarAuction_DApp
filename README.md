@@ -1,5 +1,5 @@
 # CarAuction_DApp
- Coding Bootcamps - Car Auction DApp
+ ## Coding Bootcamps - Car Auction DApp
 
 Car Auction DApp permitirá a los usuarios participar en una subasta de coches utilizando ether.
 Podremos administrar fondos de forma automática y segura, sin depender de un tercero de confianza.
@@ -10,6 +10,7 @@ Podremos administrar fondos de forma automática y segura, sin depender de un te
 2. Desplegamos el Smart Contract en Remix y Truffle e interactuamos con él.
 3. Testeando el Smart Contract.
 4. Front end e interfaz. 
+5. Desplegando el Smart Contract en una testnet de Ethereum. 
 
 
 ## Descripción Auction DApp
@@ -47,7 +48,7 @@ El propietario de la subasta puede cancelar la subasta. Además, al final de la 
 
 ## Creación del Smart Contract
 
-1. Accedemos a la carpeta contracts y creamos el archivo Auction.sol. El código del Smart Contract se puede encontrar en: fvfdvfgvgvgfvgvg
+1. Accedemos a la carpeta contracts y creamos el archivo Auction.sol. El código del Smart Contract se puede encontrar en: https://github.com/jordiguirao92/CarAuction_DApp/blob/master/contracts/Auction.sol 
 2. Compilamos el smart contract. En la carpeta de nuestro proyecto ejecutamos el comando: `truffle compile`. Se nos creará la carpeta build.
 
 
@@ -62,8 +63,8 @@ El propietario de la subasta puede cancelar la subasta. Además, al final de la 
 
 ## Desplegando el Smart Contract con Truffle 
 
-1. En la carpeta migrations, creamos el archivo: 2_CarAuction_migration.js. El código se encuentra en: rfrftgtgt
-2. Modificamos el archivo truffle-config.js. Donde configuraremos nuestra red local de Ethereum para el despliegue del contrato. El código está: rfrfrt
+1. En la carpeta migrations, creamos el archivo: 2_CarAuction_migration.js. El código se encuentra en: https://github.com/jordiguirao92/CarAuction_DApp/blob/master/migrations/2_CarAuction_migrations.js 
+2. Modificamos el archivo truffle-config.js. Donde configuraremos nuestra red local de Ethereum para el despliegue del contrato. El código está: https://github.com/jordiguirao92/CarAuction_DApp/blob/master/truffle-config.js 
 3. Iniciamos Ganache y comprobamos que los datos RPC SERVER sean los mismos que están en nuestro archivo truffle-config.js.
 4. En la carpeta raiz de nuestro proyecto ejecutamos el comando: `truffle migrate --network development`, se iniciará el despligue de nuestro smart contract. 
 
@@ -71,21 +72,33 @@ El propietario de la subasta puede cancelar la subasta. Además, al final de la 
 ## Interactuamos con nuestro Smart Contract con Truffle Console
 
 1. En la carpeta raiz de nuestro proyecto, ejecutamos `truffle console`, para acceder a la consola de truffle y poder interactuar con nuestro smart contract. Ejecutamos los siguientes comandos: 
+Direccioón del contrato:
 `auction = await MyAuction.deployed()`
+
 `auction.address`
 
+Consultando propietario del contrato:
 `ownerAddress = await auction.get_owner()`
+
 `ownerAddress`
 
+Consultando cuando acaba la subasta:
 `auctionEnd = await auction.auction_end.call()`
+
 `auctionEnd`
+
 `auctionEnd.toString()`
 
+Realizando una apuesta:
 `auctionBid = await auction.bid({value:3000000000000000000})`
+
 `auctionBid`
 
+Consultando la apuesta más alta:
 `highestBid = await auction.highestBid.call()`
+
 `highetsBid`
+
 `highetsBid.toString()`
 
 
@@ -93,7 +106,7 @@ El propietario de la subasta puede cancelar la subasta. Además, al final de la 
 ## Testing Car Auction DApp con Truffle
 
 En la carpeta test, cremos el archivo CarAuction_test.js, donde escribiremos los diferentes test de nuestra DApp.
-El código de los test está en: frfrfrfrftg
+El código de los test está en: https://github.com/jordiguirao92/CarAuction_DApp/blob/master/test/CarAuction_test.js 
 
 Para comprobar nuestros test, ejecutamos: `truffle test`
 Podremos ver en la terminal el resultado de nuestros test. 
@@ -107,16 +120,16 @@ Creamos la carpeta src dentro de la carpeta de nuestro proyecto. Dentro de la ca
 #### index.html  
 
 En este archivo crearemos la interfaz gráfica y visual de nuestra DApp. 
-El código está: ferfrfr
+El código está: https://github.com/jordiguirao92/CarAuction_DApp/blob/master/src/index.html 
 
 
 #### js
 
 Contiene los archivos: 
 
-- app.js: En este archivo crearemos el código necesario para poder conectar con nuestro smart contract. El código está: 
-- truffle-contract.js:El código está: ferfrfr
-- web3.min-js: El código está: ferfrfr
+- app.js: En este archivo crearemos el código necesario para poder conectar con nuestro smart contract. El código está: https://github.com/jordiguirao92/CarAuction_DApp/blob/master/src/js/app.js 
+- truffle-contract.js:El código está: https://github.com/jordiguirao92/CarAuction_DApp/blob/master/src/js/truffle-contract.js
+- web3.min-js: El código está: https://github.com/jordiguirao92/CarAuction_DApp/blob/master/src/js/web3.min.js 
 
 
 
