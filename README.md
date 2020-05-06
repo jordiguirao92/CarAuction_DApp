@@ -72,29 +72,34 @@ El propietario de la subasta puede cancelar la subasta. Además, al final de la 
 ## Interactuamos con nuestro Smart Contract con Truffle Console
 
 1. En la carpeta raiz de nuestro proyecto, ejecutamos `truffle console`, para acceder a la consola de truffle y poder interactuar con nuestro smart contract. Ejecutamos los siguientes comandos: 
-Direccioón del contrato:
+
+### Dirección del contrato:
+
 `auction = await MyAuction.deployed()`
 
 `auction.address`
 
-Consultando propietario del contrato:
+### Consultando propietario del contrato:
+
 `ownerAddress = await auction.get_owner()`
 
 `ownerAddress`
 
-Consultando cuando acaba la subasta:
+### Consultando cuando acaba la subasta:
+
 `auctionEnd = await auction.auction_end.call()`
 
 `auctionEnd`
 
 `auctionEnd.toString()`
 
-Realizando una apuesta:
+### Realizando una apuesta:
+
 `auctionBid = await auction.bid({value:3000000000000000000})`
 
 `auctionBid`
 
-Consultando la apuesta más alta:
+### Consultando la apuesta más alta:
 `highestBid = await auction.highestBid.call()`
 
 `highetsBid`
