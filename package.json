@@ -1,0 +1,24 @@
+{
+  "name": "carauction_dapp",
+  "version": "1.0.0",
+  "description": "Coding Bootcamps - Car Auction DApp",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "@truffle/contract": "^4.2.3",
+    "@truffle/hdwallet-provider": "^1.0.34",
+    "truffle": "^5.1.24",
+    "web3": "^1.2.7"
+  }
+}
